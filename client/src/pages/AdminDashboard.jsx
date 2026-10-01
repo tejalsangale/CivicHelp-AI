@@ -29,7 +29,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const complaintResponse = await axios.get(
-        "http://localhost:5000/api/admin/complaints",
+        "https://civichelp-ai-backend.onrender.com/api/admin/complaints",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ function AdminDashboard() {
       );
 
       const staffResponse = await axios.get(
-        "http://localhost:5000/api/staff",
+        "https://civichelp-ai-backend.onrender.com/api/staff",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ function AdminDashboard() {
       );
 
       const statisticsResponse = await axios.get(
-        "http://localhost:5000/api/admin/statistics",
+        "https://civichelp-ai-backend.onrender.com/api/admin/statistics",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -89,7 +89,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:5000/api/admin/complaints/${complaintId}/assign`,
+        `https://civichelp-ai-backend.onrender.com/api/admin/complaints/${complaintId}/assign`,
         {
           staffId: staffId,
         },
@@ -116,7 +116,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/ai/summarize",
+        "https://civichelp-ai-backend.onrender.com/api/ai/summarize",
         {
           title: complaint.title,
           description: complaint.description,

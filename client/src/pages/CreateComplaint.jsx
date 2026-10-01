@@ -30,7 +30,7 @@ function CreateComplaint() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/ai/classify",
+        "https://civichelp-ai-backend.onrender.com/api/ai/classify",
         {
           title: formData.title,
           description: formData.description,
@@ -66,7 +66,7 @@ function CreateComplaint() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/complaints",
+        "https://civichelp-ai-backend.onrender.com/api/complaints",
         formData,
         {
           headers: {

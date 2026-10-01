@@ -10,7 +10,7 @@ function Notifications() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/notifications",
+        "https://civichelp-ai-backend.onrender.com/api/notifications",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -36,7 +36,7 @@ function Notifications() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/notifications/${notificationId}/read`,
+        `https://civichelp-ai-backend.onrender.com/api/notifications/${notificationId}/read`,
         {},
         {
           headers: {

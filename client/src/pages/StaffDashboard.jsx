@@ -11,7 +11,7 @@ function StaffDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/staff/complaints",
+        "https://civichelp-ai-backend.onrender.com/api/staff/complaints",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ function StaffDashboard() {
     const token = localStorage.getItem("token");
 
     const response = await axios.get(
-      `http://localhost:5000/api/complaints/${complaintId}/history`,
+      `https://civichelp-ai-backend.onrender.com/api/complaints/${complaintId}/history`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -78,7 +78,7 @@ function StaffDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.put(
-        `http://localhost:5000/api/staff/complaints/${complaintId}/status`,
+        `https://civichelp-ai-backend.onrender.com/api/staff/complaints/${complaintId}/status`,
         {
           status: status,
         },

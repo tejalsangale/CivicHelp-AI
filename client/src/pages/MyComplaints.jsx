@@ -12,7 +12,7 @@ function MyComplaints() {
         const token = localStorage.getItem("token");
 
         const response = await axios.get(
-          "http://localhost:5000/api/complaints/my",
+          "https://civichelp-ai-backend.onrender.com/api/complaints/my",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ function MyComplaints() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        `http://localhost:5000/api/complaints/${complaintId}/history`,
+        `https://civichelp-ai-backend.onrender.com/api/complaints/${complaintId}/history`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

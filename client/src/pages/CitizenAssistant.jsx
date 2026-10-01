@@ -18,7 +18,7 @@ function CitizenAssistant() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/assistant/ask",
+        "https://civichelp-ai-backend.onrender.com/api/assistant/ask",
         {
           question: question,
         },
